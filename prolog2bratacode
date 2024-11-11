@@ -1,0 +1,52 @@
+predicates
+nondeterm vernulsya(symbol,symbol,integer)
+nondeterm uehal(symbol,symbol,integer)
+nondeterm imeet(symbol,symbol)
+nondeterm vygnal(symbol,symbol,symbol,integer)
+iskal(symbol,symbol,integer)
+prishel(symbol,symbol,integer)
+zamorozil(symbol,symbol,integer)
+vstretil(symbol,symbol,integer)
+privel(symbol,symbol,symbol,integer)
+zastavil(symbol,symbol,symbol,symbol,integer)
+nondeterm nashel(symbol,symbol,symbol,integer)
+narubil(symbol,symbol,symbol,integer)
+razjeg(symbol,symbol,symbol,integer)
+nondeterm otkr_dver(symbol,symbol,integer,symbol)
+zabral(symbol,symbol,symbol,integer)
+zaderzhaly(symbol,symbol,integer)
+uronil(symbol,symbol,integer)
+ozhivily(symbol,symbol,integer)
+
+clauses
+imeet(lesnichiy,starshiy).
+imeet(lesnichiy,mladshiy).
+imeet(mama,starshiy).
+imeet(mama,mladshiy).
+imeet(praded_moroz,ded_moroz).
+uehal(lesnichiy,magazin,1).
+uehal(mama,magazin,1).
+vygnal(starshiy,mladshiy,dom,2).
+vygnal(lesnichiy,starshiy,dom,4).
+vernulsya(lesnichiy,dom,3).
+vernulsya(mama,dom,3).
+vernulsya(starshiy,dom,21).
+vernulsya(mladshiy,dom,21).
+iskal(starshiy,mladshiy,5).
+prishel(starshiy,stekl_les,6).
+zamorozil(praded_moroz,mladshiy,7).
+vstretil(starshiy,praded_moroz,8).
+privel(praded_moroz,starshiy,dvorec,9).
+zastavil(praded_moroz,starshiy,zamorazhivat,zhivotnye,10).
+nashel(starshiy,topor,dvorec,11).
+nashel(starshiy,spichki,karman,12).
+narubil(starshiy,drova,topor,13).
+razjeg(starshiy,koster,spichki,14).
+otkr_dver(starshiy,koster,15,not_otkr).
+otkr_dver(zhivotnye,kluv,16,otkr).
+zabral(starshiy,mladshiy,dvorec,17).
+zaderzhaly(zhivotnye,praded_moroz,18).
+uronil(starshiy,mladshiy,19).
+ozhivily(zhivotnye,mladshiy,20).
+goal
+imeet(X,starshiy),vygnal(X,starshiy,dom,4).
